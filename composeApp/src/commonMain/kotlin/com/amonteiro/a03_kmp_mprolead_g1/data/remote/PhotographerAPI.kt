@@ -19,7 +19,9 @@ data class PhotographerDTO(
     val portfolio: List<String>,
 )
 
-suspend fun main() {
+// Démo manuelle (anciennement nommée main()). Renommée car deux fonctions main()
+// top-level dans le même package entrent en conflit à la compilation Kotlin/Native (iOS).
+suspend fun mainPhotographer() {
 
     initKoin()
 

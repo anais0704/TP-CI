@@ -23,7 +23,9 @@ data class MuseumDTO(
     val primaryImage: String,
 )
 
-suspend fun main() {
+// Démo manuelle (anciennement nommée main()). Renommée car deux fonctions main()
+// top-level dans le même package entrent en conflit à la compilation Kotlin/Native (iOS).
+suspend fun mainMuseum() {
     println(KtorMuseumApi.loadMuseums().joinToString(separator = "\n\n"))
 
     //Pour que le programme s'arrête, inutile sur Android
